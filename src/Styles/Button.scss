@@ -36,7 +36,7 @@ $color-button-submit: white;
     color: $color-button-submit;
     background-color: $bg-button-submit;
     border-color: darken($bg-button-submit, 10%);
-
+    margin-top: 20px !important;
     &:hover {
       background-color: darken($bg-button-submit, 10%);
     }
