@@ -1,6 +1,6 @@
 <template>
   <div>
-    <input
+    <textarea
       :id="id"
       :type="type"
       :ref="refName"
@@ -75,3 +75,10 @@ export default {
   },
 };
 </script>
+<style scoped>
+textarea {
+  resize: none;
+  width: 100%;
+  font-size: 0.8em;
+}
+</style>
