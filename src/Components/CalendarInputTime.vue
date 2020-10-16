@@ -12,12 +12,12 @@
       <span
         class="vdpr-datepicker__calendar-input-time-control-up"
         @click="onClickUp">
-      &#9652;
+        &#9650;
       </span>
       <span
         class="vdpr-datepicker__calendar-input-time-control-down"
         @click="onClickDown">
-        &#9662;
+        &#9660;
       </span>
     </div>
   </div>
@@ -101,3 +101,9 @@ export default {
   },
 };
 </script>
+<style scoped>
+.vdpr-datepicker__calendar-input-time-control-up {
+  margin-bottom: -5px;
+  margin-top: 2px;
+}
+</style>
