@@ -344,7 +344,37 @@ export default {
       const lastYearFrom = this.dateUtil.subtract(thisYearFrom, 1, 'y');
       const lastYearTo = this.dateUtil.subtract(thisYearTo, 1, 'y');
 
+      /* Custom */
+      const lastHourTo = now;
+      const lastHourFrom = this.dateUtil.subtract(lastHourTo, 1, 'h');
+      const last6HoursTo = now;
+      const last6HoursFrom = this.dateUtil.subtract(last6HoursTo, 6, 'h');
+      const last12HoursTo = now;
+      const last12HoursFrom = this.dateUtil.subtract(last12HoursTo, 12, 'h');
+      const last24HoursTo = now;
+      const last24HoursFrom = this.dateUtil.subtract(last24HoursFrom, 24, 'h');
+
       return [
+        {
+          name: 'Last Hour',
+          from: lastHourFrom,
+          to: lastHourTo,
+        },
+        {
+          name: 'Last 6 Hours',
+          from: last6HoursFrom,
+          to: last6HoursTo,
+        },
+        {
+          name: 'Last 12 Hours',
+          from: last12HoursFrom,
+          to: last12HoursTo,
+        },
+        {
+          name: 'Last 24 Hours',
+          from: last24HoursFrom,
+          to: last24HoursTo,
+        },
         {
           name: 'Today',
           from: todayFrom,
@@ -380,11 +410,11 @@ export default {
           from: thisYearFrom,
           to: thisYearTo,
         },
-        {
-          name: 'Last Year',
-          from: lastYearFrom,
-          to: lastYearTo,
-        },
+        // {
+        //   name: 'Last Year',
+        //   from: lastYearFrom,
+        //   to: lastYearTo,
+        // },
       ];
     },
     onPrevCalendar() {
